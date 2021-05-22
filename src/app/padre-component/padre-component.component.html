@@ -1,0 +1,31 @@
+
+<form [formGroup]="padreForm" name="padreForm">
+    <mat-form-field appearance="legacy">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="nombre"  matInput placeholder="nombre">
+      </mat-form-field>
+    
+      <mat-form-field appearance="legacy">
+        <mat-label>Apellido</mat-label>
+        <input formControlName="apellido" matInput placeholder="apellido">
+      </mat-form-field>
+    
+      <mat-form-field appearance="legacy">
+        <mat-label>Edad</mat-label>
+        <input formControlName="edad" maxlength="2" matInput placeholder="edad">
+      </mat-form-field>
+    
+    </form> 
+
+
+     <button [disabled]="padreForm.invalid" mat-button color="warn"
+    (click)="guardar()">Enviar</button> 
+
+
+    
+
+    <app-hijo-component [dataPadre]='nombrePadre' (nombreEvento)="recibePadre($event)"></app-hijo-component>
+  
+  {{valorCallback}} 
+
+  

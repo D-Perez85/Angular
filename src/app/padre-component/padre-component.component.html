@@ -2,7 +2,7 @@
 <form [formGroup]="padreForm" name="padreForm">
     <mat-form-field appearance="legacy">
         <mat-label>Nombre</mat-label>
-        <input formControlName="nombre"  matInput placeholder="nombre">
+        <input formControlName="nombre" matInput placeholder="nombre">
       </mat-form-field>
     
       <mat-form-field appearance="legacy">
@@ -17,15 +17,9 @@
     
     </form> 
 
-
      <button [disabled]="padreForm.invalid" mat-button color="warn"
     (click)="guardar()">Enviar</button> 
 
-
-    
-
-    <app-hijo-component [dataPadre]='nombrePadre' (nombreEvento)="recibePadre($event)"></app-hijo-component>
-  
-  {{valorCallback}} 
-
+    <app-hijo-component [dataPadre]='nombrePadre' (nombreEvento)="recibePadre($event)" >   </app-hijo-component>
+  <!-- {{valorCallback}} -->
   

@@ -12,8 +12,7 @@ export class PadreComponentComponent implements OnInit {
   constructor(private fb: FormBuilder ) { }
 
   ngOnInit(): void {
-    this.initPadreForm()
-    
+    this.initPadreForm() 
   }
   initPadreForm(){
     this.padreForm = this.fb.group({
@@ -30,9 +29,7 @@ export class PadreComponentComponent implements OnInit {
 
    recibePadre(event: string){
     debugger; 
-
     this.valorCallback = event; 
   }
-
 
 }

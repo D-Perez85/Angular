@@ -5,15 +5,25 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './hijo-component.component.html',
   styleUrls: ['./hijo-component.component.css']
 })
+
 export class HijoComponentComponent implements OnInit {
-  @Input() dataPadre: any;
+  @Input() dataPadre : any;
   @Output() nombreEvento = new EventEmitter <string>(); 
+  nombre = ""; 
+
   constructor() { }
 
   ngOnInit(): void {
+   
+    this.dataPadre; 
   }
   callback(){
-   this.nombreEvento.emit("NUEVO NOMBRE")
+   this.dataPadre.nombre = this.nombre
+   this.nombreEvento.emit(this.dataPadre.nombre); 
+   
   }
+
+
+
 
 }

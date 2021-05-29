@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PadreComponentComponent } from './padre-component/padre-component.component';
 import { HijoComponentComponent } from './hijo-component/hijo-component.component';
-
+import {FormsModule} from '@angular/forms';
 //From Angular Material
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
@@ -31,7 +31,8 @@ import{ReactiveFormsModule} from '@angular/forms';
     MatRadioModule, 
     MatInputModule, 
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
     
     
   ],

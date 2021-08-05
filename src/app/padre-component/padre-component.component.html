@@ -1,3 +1,5 @@
+<body>
+  
 
 <form [formGroup]="padreForm" name="padreForm">
     <mat-form-field appearance="legacy">
@@ -17,9 +19,28 @@
     
     </form> 
 
-     <button [disabled]="padreForm.invalid" mat-button color="warn"
-    (click)="guardar()">Enviar</button> 
 
-    <app-hijo-component [dataPadre]='nombrePadre' (nombreEvento)="recibePadre($event)" >   </app-hijo-component>
-  <!-- {{valorCallback}} -->
+     <button [disabled]="padreForm.invalid" mat-button color="warn"
+    (click)="guardar()">Enviar</button>  
+     <app-hijo-component [dataPadre]='nombrePadre' (nombreEvento)="recibePadre($event)"></app-hijo-component>
+    <br> <br>
+    <div>
+  <!-- Formulario de prueba Pipes {{this.padreForm.value | uppercase}} <br> <br> -->
+  <!-- El mejor =  {{nombre | uppercase}}  <br> <br> -->
+  <p> Fecha: {{fecha | date}}</p>
   
+  <!-- {{valorCallback}} -->
+
+  <!-- Pipe {{50 | kmAmillas}} --> <br>
+  Distancia calcuada : {{distanciaEnmillas}}
+
+    </div>
+
+    <div *ngFor="let red of alumnos">
+      <p>{{red.name}}</p>
+      <p>{{red.cost}}</p>
+      <p>{{red.category}}</p>
+    
+    </div>
+
+  </body>

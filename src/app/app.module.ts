@@ -13,14 +13,16 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
 import{ReactiveFormsModule} from '@angular/forms';
-
+import {kmAMillaPipe} from './pipes/km-a-millas'
+import {AlumnoService} from './services/alumno.service'; 
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponentComponent,
-    HijoComponentComponent
-
+    HijoComponentComponent,
+kmAMillaPipe
   ],
   imports: [
     BrowserModule,
@@ -32,11 +34,13 @@ import{ReactiveFormsModule} from '@angular/forms';
     MatInputModule, 
     MatButtonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule
+    
     
     
   ],
-  providers: [],
+  providers: [AlumnoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
